@@ -9,3 +9,25 @@ console.log(typeof a, typeof b, typeof c);
     console.log(a);
 }
 console.log(a);
+let p = "ayush";
+let q = 5;
+let r = 5.5;
+let s = undefined;
+let t = null;
+let u = true;
+console.log(p,q,r,s,t,u);
+console.log(typeof p,typeof q,typeof r,typeof s,typeof t,typeof u);
+
+let o = {
+    name : "ayush",
+    "roll" : 43
+};
+console.log(o);
+o.salary = "500crore";
+console.log(o);
+o.salary = "1000crore";
+console.log(o);
+o.present = true;
+console.log(o);
+ 
+
