@@ -4,6 +4,19 @@ function randomIntFromInterval(min, max) {
   
 const rndInt = randomIntFromInterval(1, 5);
 console.log(rndInt);
-let a = document.getElementsByClassName("box1");
-console.log(a);
 
+let boxes = document.querySelector(".container").children;
+// console.log(boxes);
+
+function getRandomColor(){
+  let val1 = randomIntFromInterval(1, 255);
+  let val2 = randomIntFromInterval(1, 255);
+  let val3 = randomIntFromInterval(1, 255);
+  return `rgb(${val1},${val2},${val3})`;
+}
+
+
+Array.from(boxes).forEach (e=>{
+  e.style.backgroundColor = getRandomColor();
+  e.style.color = getRandomColor();
+})
