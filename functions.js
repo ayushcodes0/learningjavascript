@@ -11,3 +11,5 @@ const print = (x) => {
 
 print(5 );
 print(10);
+let b = Math.random();
+console.log(b);
