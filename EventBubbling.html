@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+    <style>
+      .child {
+        background-color: aliceblue;
+        padding: 14px;
+        border: 2px solid black;
+      }
+      .childContainer {
+        background-color: antiquewhite;
+        padding: 14px;
+        border: 2px solid black;
+      }
+      .container {
+        background-color: aqua;
+        padding: 14px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="childContainer">
+        <div class="child">hey I am a child</div>
+      </div>
+    </div>
+    <script>
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Child was clicked");
+      });
+      document
+        .querySelector(".childContainer")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("ChildContainer was clicked");
+        });
+      document.querySelector(".container").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("container was clicked");
+      });
+
+      function getRandomColor() {
+        let val1 = Math.floor(Math.random() *255);
+        let val2 = Math.floor(Math.random() *255);
+        let val3 = Math.floor(Math.random() *255);
+        return `rgb(${val1},${val2},${val3})`;
+      }
+
+    // ye baar baar color ko utne time ke baad change karta rahega
+    //   let a = setInterval(() => {
+    //     document.querySelector(".container").style.background = getRandomColor();
+    //   },600);
+
+    // Ye utne seconds ke baad bas ek baar color ko change karega
+    // let a = setTimeout(() => {
+    //     document.querySelector(".container").style.background = getRandomColor();
+    //   },1000);
+      console.log(a);
+    </script>
+  </body>
+</html>
+
+<!-- event bubbling me jab tum child pr click kar rahe the to auto matically childContainer or container par bhi click ho raha tha e.stopPropogation() lagane se event bubbling stop ho jati hai -->
