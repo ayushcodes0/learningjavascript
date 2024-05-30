@@ -22,11 +22,11 @@ async function main(){
     },700)
 
     let text = [
-        "Reading Your Files...",
-        "Initializing Hacking...",
-        "Password Files Detected...",
-        "Sending All Password And Personal Files to Server...",
-        "Cleaning Up...",
+        "Reading Your Files...=",
+        "Initializing Hacking..",
+        "Password Files Detected..",
+        "Sending All Password And Personal Files to Server..",
+        "Cleaning Up..",
     ];
 
     for (const item of text) {
